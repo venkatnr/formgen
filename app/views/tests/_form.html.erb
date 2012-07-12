@@ -1,0 +1,23 @@
+<%= form_for(@test) do |f| %>
+ 
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </div>
+  <div class="field">
+   <br />
+  FIRST <%= f.check_box :location, { :multiple => false }, 'landscape', nil %>
+  SECOND <%= f.check_box :location, { :multiple => false }, 'people', nil %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
